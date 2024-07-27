@@ -1,0 +1,91 @@
+body{
+    color: white;
+    background-color: black;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+container{
+    background-color: rgb(2, 2, 83,0.50);
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+header{
+    padding: 10px  ;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    /* background: url("../../../Images/deadpool-wolverine_ifqe5dtr_500x749.jpg"); */
+    background-size: cover;
+    overflow: hidden;
+    /* scale: 0.7; */
+    background-position: center;  
+    width: 200px;
+    height: 300px ;
+    aspect-ratio: auto;
+    border-radius: 15px;
+
+    position: relative;
+    mask-image: black;
+    padding: 15px;
+    padding-top: 10px;
+    margin: 7px;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    text-overflow: ellipsis " [..]";
+    
+}
+.text-content{
+    opacity: 0;
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    white-space: wrap;
+    text-overflow: ellipsis " [..]";
+    font-size: large;
+    text-shadow: 1px 1px 2px black;
+}
+.watch{
+    visibility:hidden;
+    position: absolute;
+    align-self: center;
+    bottom: 5%;
+    cursor: pointer;
+}
+.card{
+    transition:scale 0.4s , visibility 0.4s ease ;
+}
+.card:hover{
+    scale: 1.4;
+    mask-image: black;
+    z-index: 2;
+    transition-duration: 400ms;
+    .text-content , .watch{
+        opacity: 1;
+        transition: opacity 0.4s ;
+
+    }
+}
+.text-content , .watch {
+    opacity: 0;
+    transition: visibility 0.1s opacity 0.4s;
+}
